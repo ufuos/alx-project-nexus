@@ -1,8 +1,5 @@
 🧠 Project Nexus Documentation
 
-**Repository:** [`alx-project-nexus`](https://github.com/ufuos/alx-project-nexus)  
-
-
 Repository:** [`alx-project-nexus`](https://github.com/ufuos/alx-project-nexus)  
 
 ---
@@ -15,17 +12,6 @@ Repository:** [`alx-project-nexus`](https://github.com/ufuos/alx-project-nexus)
 ![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?logo=docker&logoColor=white)  
 ![GitHub](https://img.shields.io/badge/GitHub-Repo-black?logo=github&logoColor=white)  
 ![License](https://img.shields.io/badge/License-MIT-green.svg)  
-
-
-
-
-
-
-
-
-
-
-
 
 
 CI/CD Status:
