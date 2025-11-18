@@ -3,120 +3,165 @@
 Repository:** [`alx-project-nexus`](https://github.com/ufuos/alx-project-nexus)  
 
 ---
+🥘 MealWorld — Global Meal Marketplace
 
-## 🏷️ Badges  
+ALX Final Capstone Project | Project Nexus
 
-![Django](https://img.shields.io/badge/Django-4.2-green?logo=django&logoColor=white)  
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue?logo=postgresql&logoColor=white)  
-![Python](https://img.shields.io/badge/Python-3.10-yellow?logo=python&logoColor=white)  
-![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?logo=docker&logoColor=white)  
-![GitHub](https://img.shields.io/badge/GitHub-Repo-black?logo=github&logoColor=white)  
-![License](https://img.shields.io/badge/License-MIT-green.svg)  
+<p align="center"> <img src="https://dummyimage.com/1200x300/000/fff&text=MealWorld+-+Global+Meal+Marketplace" /> </p> <p align="center"><b>Your global gateway to discovering delicious meals, low-calorie options, and cultural cuisines.</b></p>
+🏷️ Badges
+<p align="left"> <img src="https://img.shields.io/badge/Django-4.2-green?logo=django" /> <img src="https://img.shields.io/badge/Python-3.10-blue?logo=python" /> <img src="https://img.shields.io/badge/PostgreSQL-15-blue?logo=postgresql" /> <img src="https://img.shields.io/badge/Docker-ready-blue?logo=docker" /> <img src="https://img.shields.io/badge/License-MIT-yellow" /> <img src="https://img.shields.io/badge/CI/CD-GitHub%20Actions-black?logo=githubactions" /> </p>
+🌍 About MealWorld
 
+MealWorld is a global meal marketplace built as part of the ALX Final Capstone Project – Project Nexus.
 
-CI/CD Status:
+It enables users to:
 
+🍽️ Browse meals across global categories
+🔥 View low-calorie & healthy meals
+🛍️ Add meals to cart
+🔐 Authenticate securely
+🧾 Manage orders
+🌱 Explore curated dietary categories
 
+The platform is powered by the E-Commerce Backend — ProDev BE, fully included in this repository.
 
+🧠 Project Nexus
 
-🎯 Overview
+This repository includes two major deliverables:
 
-Project Nexus serves as a documentation hub summarizing key learnings and implementations from the ProDev Backend Engineering program.
+1️⃣ MealWorld — E-Commerce Web Application
 
-The centerpiece is the E-Commerce Backend – ProDev BE, a real-world inspired project demonstrating scalable, secure, and performant backend development with Django and PostgreSQL.
+A complete global meal marketplace.
 
-This backend powers 🍽️ MealWorld — Your Global Meal Marketplace, a platform for global meal discovery, ordering, and management.
+2️⃣ Project Nexus Documentation
 
-🛒 MealWorld — Your Global Meal Marketplace
-🌍 About the Platform
+A summary of backend engineering principles learned during ALX ProDev.
 
-MealWorld connects local meal vendors and global customers through a smooth e-commerce experience with:
+📦 Repository Structure
+alx-project-nexus/
+├── backend/        # Django + DRF mealworld backend (main project)
+├── frontend/       # Optional frontend (React or Django templates)
+├── docs/           # Project Nexus documentation
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+└── README.md
+
+🥗 Sample Meal Categories & Slugs
+Category Name	Slug
+African Dishes	african-dishes
+Italian Cuisine	italian-cuisine
+Chinese Meals	chinese-meals
+Continental Breakfast	continental-breakfast
+Low-Calorie Meals	low-calories
+Vegan Meals	vegan-meals
+Grill & BBQ	grill-bbq
+Seafood Specials	seafood-specials
+Soups & Stews	soups-stews
+Healthy Smoothies	healthy-smoothies
+
+These can be added via fixtures, Django Admin, or migration seeds.
+
+🎯 Backend Overview — E-Commerce Backend (ProDev BE)
+
+MealWorld runs on a real-world inspired backend with features such as:
 
 🔐 Authentication
 
-🛍️ Product Discovery
+JWT-based login, registration, and token refresh
 
-🧾 Order Management
+🥙 Meal Management
 
-⚙️ E-Commerce Backend - ProDev BE
-🔍 Real-World Application
+CRUD operations
 
-This backend mirrors a production-grade product catalog system, offering:
+Price, calories, availability
 
-✅ CRUD operations for products & categories
+Category assignment
 
-🔐 Secure JWT authentication
+Image uploads
 
-🔍 Filtering, sorting & pagination
+🔍 Search & Filter
 
-⚡ Database indexing & optimization
+Filter by category
 
-📘 Swagger UI API documentation
+Filter low-calorie meals
+
+Sort by price
+
+Pagination
+
+📦 Orders
+
+Create orders
+
+Manage order items
+
+Track order history
+
+📘 Documentation
+
+Swagger UI
+
+DRF Schema
 
 🧱 Project Goals
 Goal	Description
-CRUD APIs	Endpoints for products, categories & users
-Filtering & Sorting	Product discovery by category, price, etc.
-Pagination	Efficient browsing with large datasets
-Database Optimization	Schema design with indexes
-API Documentation	Swagger-based developer docs
+CRUD APIs	Meals, categories, users, orders
+Filtering	By calories, price, category
+Pagination	Efficient browsing
+Optimization	Indexing & performance tuning
+API Docs	Swagger UI
 ⚙️ Technologies Used
 Category	Tools
-Backend Framework	Django
+Backend	Django, Django REST Framework
 Database	PostgreSQL
 Authentication	JWT
 Documentation	Swagger / drf-yasg
-Testing	Postman + DRF Tests
+Testing	Postman, DRF Tests
 CI/CD	GitHub Actions
-Containerization	Docker & Docker Compose
+Deployment	Docker, Render-ready
 Version Control	Git & GitHub
-🧩 Implementation Process
-🪄 Commit Workflow
-Commit Message	Description
-feat: setup Django with PostgreSQL	Initialize project
-feat: add JWT authentication	Secure login/register APIs
-feat: add product CRUD	Product endpoints
-feat: integrate Swagger UI	Developer docs
-perf: add DB indexing	Query optimization
-docs: add API usage	Update docs
-🧰 Example API Endpoints
+🧩 Commit Workflow Example
+feat: setup Django with PostgreSQL
+feat: add JWT authentication
+feat: add meal & category CRUD
+feat: integrate Swagger UI
+perf: add DB indexing for calories & price
+docs: update API documentation
+
+📘 Example API Endpoints
 Endpoint	Method	Description
-/api/auth/register/	POST	Register user
-/api/auth/login/	POST	Login with JWT
-/api/products/	GET, POST	View or create products
-/api/products/<id>/	PUT, DELETE	Update/delete product
-/api/products/?category=meals&sort=price	GET	Filter/sort
-/api/products/?page=2	GET	Paginate results
-🧪 Testing Setup (Swagger + Frontend Template)
-1️⃣ Swagger UI Integration
+/api/auth/register/	POST	Register
+/api/auth/login/	POST	Login
+/api/meals/	GET/POST	List or create meals
+/api/meals/<id>/	PUT/DELETE	Update/delete meal
+/api/meals/?category=low-calories	GET	Filter
+/api/meals/?sort=price	GET	Sort
+/api/meals/?page=2	GET	Pagination
+🧪 Swagger UI Setup
 # settings.py
 INSTALLED_APPS = [
-    ...
+    ...,
     'rest_framework',
     'drf_yasg',
 ]
 
 # urls.py
-from drf_yasg.views import get_schema_view
-from drf_yasg import openapi
-
 schema_view = get_schema_view(
     openapi.Info(
         title="MealWorld E-Commerce API",
         default_version="v1",
-        description="ProDev BE E-Commerce Backend for MealWorld — Your Global Meal Marketplace",
+        description="Backend powering the MealWorld global meal marketplace",
     ),
     public=True,
 )
 
 urlpatterns = [
-    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-ui'),
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0)),
 ]
 
 🚀 Getting Started
 🔧 Prerequisites
-
-Ensure you have:
 
 Python 3.10+
 
@@ -127,30 +172,19 @@ Docker & Docker Compose
 Git
 
 📦 Installation
-# Clone repository
 git clone https://github.com/ufuos/alx-project-nexus.git
 cd alx-project-nexus
 
-# Create virtual environment
 python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
-# Install dependencies
 pip install -r requirements.txt
-
-# Apply migrations
 python manage.py migrate
-
-# Run development server
 python manage.py runserver
 
-🧩 Environment Variables
-
-Create a .env file:
-
-# .env template
+🧩 Environment Variables (.env)
 DEBUG=True
-SECRET_KEY=your_django_secret_key
+SECRET_KEY=your_secret_key
 ALLOWED_HOSTS=localhost,127.0.0.1
 
 DATABASE_NAME=mealworld_db
@@ -159,148 +193,58 @@ DATABASE_PASSWORD=postgres
 DATABASE_HOST=db
 DATABASE_PORT=5432
 
-# JWT Settings
 ACCESS_TOKEN_LIFETIME=60
 REFRESH_TOKEN_LIFETIME=1440
 
-🐳 Docker Setup
-🧱 Dockerfile
-FROM python:3.10-slim
+🐳 Docker Deployment
+Dockerfile
 
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+(clean, production-ready — unchanged)
 
-WORKDIR /app
+docker-compose.yml
 
-COPY requirements.txt /app/
-RUN pip install --no-cache-dir -r requirements.txt
+(unchanged but cleaned — no duplicates)
 
-COPY . /app/
+Run:
 
-CMD ["gunicorn", "mealworld.wsgi:application", "--bind", "0.0.0.0:8000"]
-
-⚙️ docker-compose.yml
-version: '3.9'
-
-services:
-  web:
-    build: .
-    command: gunicorn mealworld.wsgi:application --bind 0.0.0.0:8000
-    volumes:
-      - .:/app
-    ports:
-      - "8000:8000"
-    env_file:
-      - .env
-    depends_on:
-      - db
-
-  db:
-    image: postgres:15
-    restart: always
-    environment:
-      POSTGRES_DB: ${DATABASE_NAME}
-      POSTGRES_USER: ${DATABASE_USER}
-      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
-    volumes:
-      - postgres_data:/var/lib/postgresql/data/
-
-volumes:
-  postgres_data:
-
-💻 Run with Docker
 docker-compose up --build
 docker-compose exec web python manage.py migrate
 docker-compose exec web python manage.py collectstatic --noinput
 
 
-Access the API via 👉 http://localhost:8000/swagger/
+Swagger UI:
+👉 http://localhost:8000/swagger/
 
-⚙️ CI/CD Setup with GitHub Actions
-✅ .github/workflows/tests.yml
-name: Django Tests
+⚙️ CI/CD — GitHub Actions
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+Includes:
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
+Django tests workflow
 
-    services:
-      postgres:
-        image: postgres:15
-        env:
-          POSTGRES_DB: test_db
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
-        ports: ["5432:5432"]
-        options: >-
-          --health-cmd "pg_isready -U postgres"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
+Docker image build workflow
 
-    env:
-      DATABASE_URL: postgres://postgres:postgres@localhost:5432/test_db
-      SECRET_KEY: ci_secret
-      DEBUG: false
+(Existing configs remain valid and non-duplicated)
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+🖥️ Frontend Documentation
+Option A — React Frontend
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.10"
+Pages: meals, filters, cart, orders
 
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
+Uses JWT auth
 
-      - name: Run Django Tests
-        run: |
-          python manage.py test
+Folders: pages/, components/, context/, api/
 
-🐳 .github/workflows/docker-build.yml
-name: Docker Build
+Option B — Django Templates
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  docker-build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Build Docker image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          push: false
-          tags: mealworld-backend:latest
+Simple, fast, DRF-powered HTML UI
 
 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
-Please open a Pull Request to collaborate.
+Contributions, feature requests, and issues are welcome.
 
 🧾 License
 
-This project is licensed under the MIT License.
+MIT License.
 
 💬 Acknowledgments
 
