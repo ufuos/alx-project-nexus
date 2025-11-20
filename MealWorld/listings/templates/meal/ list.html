@@ -1,43 +1,59 @@
 {% extends 'base.html' %}
-{% block title %}mealworld{% endblock %}
+{% block title %}MealWorld{% endblock %}
 {% block content %}
+
 <div class="row justify-content-center">
+
+  <!-- Categories Sidebar -->
   <div class="col-lg-3">
     <div class="card shadow-custom border-0">
-      <h4 class="p-3 font-weight-bold text-grey">
-        Categories
-      </h4>
+      <h4 class="p-3 font-weight-bold text-grey">Categories</h4>
+
       <ul class="list-group border-0 categories_list">
-        <li class="list-group-item border-0 p-0 selected">
-          <a href="" class="btn btn-block text-left">All</a>
-        </li>
+
         {% for category in categories %}
-        <li class="list-group-item border-0 p-0 unselected">
-          <a href="" class="btn btn-block text-left">
+        <li {% if requested_category and category.slug==requested_category.slug %}
+          class="list-group-item border-0 p-0 selected" {% else %} class="list-group-item border-0 p-0 unselected" {%
+          endif %}>
+          <a href="{{ category.get_absolute_url }}" class="btn btn-block text-left">
             {{ category.name }}
           </a>
         </li>
         {% endfor %}
+
       </ul>
     </div>
   </div>
+
+  <!-- Meals Section -->
   <div class="col-lg-6">
+
     <div class="card shadow-custom border-0 mb-4">
       <div class="card-body text-center">
         <h2 class="font-weight-bold text-grey">
-          Our products
+          {% if requested_category %}
+          {{ requested_category.name }}
+          {% else %}
+          Our meals
+          {% endif %}
         </h2>
         <div class="bottom_line"></div>
       </div>
     </div>
+
     <div class="row no-gutters">
       {% for meal in meals %}
       <div class="col-sm-6">
         <div class="card meal">
+
           <div class="item">
+
+            <!-- Meal Image -->
             <div class="item-image">
-              <img src="{{ meal.image.url }}" alt="" class="img-fluid rounded-0">
+              <img src="{{ meal.image.url }}" alt="{{ meal.name }}" class="img-fluid rounded-0">
             </div>
+
+            <!-- Hover Overlay -->
             <div class="item-text">
               <div class="item-text-wrap">
                 <a href="" class="h2 text-white text-decoration-none">
@@ -45,21 +61,29 @@
                 </a>
               </div>
             </div>
+
+            <!-- Meal Info -->
             <div class="card-body text-center">
               {{ meal.name }}
               <hr>
-              <span>${{ neal.price }}</span>
+              <span>${{ meal.price }}</span>
               <div>
                 <i class="fas fa-fire"></i> {{ meal.shu }} SHU
               </div>
             </div>
+
           </div>
+
         </div>
       </div>
       {% endfor %}
     </div>
+
   </div>
+
   <div class="col-lg-3"></div>
+
 </div>
+
 <hr>
 {% endblock content %}
