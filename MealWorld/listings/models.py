@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse 
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Create your models here.
 
@@ -45,4 +46,19 @@ class Meal(models.Model):
         return reverse(
             'listings:meal_list_by_category',
             args=[self.slug]
-        ) 
+        )
+         
+class Review(models.Model):
+    meal = models.ForeignKey(
+        Meal,
+        related_name='reviews',
+        on_delete=models.CASCADE
+    )
+    author = models.CharField(max_length=50)
+    rating = models.IntegerField(
+        validators=[MinValueValidator(1), MaxValueValidator(5)]
+    )
+    text = models.TextField(blank=True)
+    created = models.DateTimeField(auto_now_add=True)
+    class Meta:
+        ordering = ('-created',) 
